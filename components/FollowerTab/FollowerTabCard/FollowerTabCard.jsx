@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import Image from "next/image";
 import { MdVerified } from "react-icons/md";
@@ -50,7 +49,7 @@ const FollowerTabCard = ({ i, el }) => {
         <div className={Style.FollowerTabCard_box_info}>
           <div className={Style.FollowerTabCard_box_info_name}>
             <h4>
-              Giada Mann{""}{" "}
+              Aditya Raj{""}{" "}
               <span>
                 <MdVerified />
               </span>

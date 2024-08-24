@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { BsCircleFill } from "react-icons/bs";
+import { Bs0CircleFill } from "react-icons/bs";
 
 //INTERNAL IMPORT
 import Style from "./Category.module.css";
@@ -24,7 +24,7 @@ const Category = () => {
 
             <div className={Style.category_box_title}>
               <span>
-                <BsCircleFill />
+                <Bs0CircleFill />
               </span>
               <div className={Style.category_box_title_info}>
                 <h4>Enterainment</h4>

@@ -5,9 +5,9 @@
   --icons-color: #4c5773;
   --icons-light-color: #4c577341;
   --icons-bg-color: #e2e6e9;
-  --shadow-dark-color: #e7d3e0;
-  --shadow-light-color: #fff;  
-  /* entire main body color */
+  --shadow-dark-color: #d3dae7;
+  --bg-shadow-dark-color: #d3dae745;
+  --shadow-light-color: #fff;
   --main-bg-color: #ecf0f3;
 
   --box-shadow: 1rem 1rem 1rem var(--shadow-dark-color),
@@ -63,7 +63,7 @@ a {
     color-scheme: dark;
   }
   body {
-    color: black;
+    color:black;
     background: white;
   }
 }
