@@ -15,7 +15,7 @@ const BigNFTSilder = () => {
 
   const sliderData = [
     {
-      title: "Hello NFT",
+      title: "My NFT",
       id: 1,
       name: "Aditya Raj",
       collection: "GYm",
@@ -33,7 +33,7 @@ const BigNFTSilder = () => {
     {
       title: "Buddy NFT",
       id: 2,
-      name: "Saumya",
+      name: "Smit Patil",
       collection: "Home",
       price: "0000004 ETH",
       like: 243,
