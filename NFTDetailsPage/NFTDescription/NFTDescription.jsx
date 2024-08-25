@@ -153,7 +153,7 @@ const NFTDescription = () => {
         </div>
         {/* //Part TWO */}
         <div className={Style.NFTDescription_box_profile}>
-          <h1>BearX #23453</h1>
+          <h1>ADR-X #23453</h1>
           <div className={Style.NFTDescription_box_profile_box}>
             <div className={Style.NFTDescription_box_profile_box_left}>
               <Image
@@ -166,7 +166,7 @@ const NFTDescription = () => {
               <div className={Style.NFTDescription_box_profile_box_left_info}>
                 <small>Creator</small> <br />
                 <span>
-                  Karli Costa <MdVerified />
+                  Aditya Raj <MdVerified />
                 </span>
               </div>
             </div>
@@ -183,7 +183,7 @@ const NFTDescription = () => {
               <div className={Style.NFTDescription_box_profile_box_right_info}>
                 <small>Creator</small> <br />
                 <span>
-                  Karli Costa <MdVerified />
+                  Smit Patil <MdVerified />
                 </span>
               </div>
             </div>
