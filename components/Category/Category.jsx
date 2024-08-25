@@ -24,8 +24,8 @@ const Category = () => {
               src={el}
               className={Style.category_box_img}
               alt="Background image"
-              width={350}
-              height={150}
+              width={500}
+              height={200}
               objectFit="cover"
             />
 

@@ -48,6 +48,10 @@ const Collection = () => {
       background: images.creatorbackground8,
       user: images.user8,
     },
+    {
+      background: images.creatorbackground5,
+      user: images.user5,
+    },
   ];
   const newsArray = [
     {

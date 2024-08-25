@@ -163,6 +163,7 @@
     color: var(--shadow-dark-color);
     padding: .5rem 1rem;
     border-radius: 5rem;
+    height: auto;
 }
 
 
