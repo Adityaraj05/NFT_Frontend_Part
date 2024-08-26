@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState, useEffect, useContext} from "react";
 
 //INTERNAL IMPORT
 import Style from "../styles/index.module.css";
@@ -16,10 +16,20 @@ import {
   FollowerTab,
   Slider,
   Brand,
-  Video,
+
 } from "../components/componentsindex";
 
+// IMPORTING CONTRACT DATA
+import {checkContract, NFTMarketplaceContext} from "../Context/NFTMarketplaceContext";
+
+
 const Home = () => {
+  const {checkIfWalletConnected} =useContext(NFTMarketplaceContext);
+  useEffect(()=>{
+    checkIfWalletConnected()
+  },[])
+
+ 
   return (
     <div className={Style.homePage}>
       <HeroSection />
@@ -46,7 +56,7 @@ const Home = () => {
       <Category />
       <Subscribe />
       <Brand />
-      <Video />
+  
     </div>
   );
 };

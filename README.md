@@ -12,4 +12,9 @@ npx hardhat node
 
 npx hardhat run scripts/deploy.js --network localhost
 
-<!-- Contract deployed to address: 0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9 -->
+ <!-- intsall :- npm i ipfs-http-client, npm i axios -->
+
+ <!-- how to redeploy  -->
+ before that delete artifact, cache and abi
+ step 1 :- npx hardhat node   ==> it will open local blockchain account
+ step 2: In another terminal npx hardhat run scripts/deploy.js --network localhost   --> you will get the same address always
