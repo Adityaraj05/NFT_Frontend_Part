@@ -19,13 +19,13 @@ const aboutus = () => {
       images: images.founder2,
     },
     {
-      name: "Orla Dwyer",
+      name: "Smit Patil",
       position: "Co-founder, Chairman",
       images: images.founder3,
     },
     {
       name: "Sakshi Upadhya",
-      position: "Co-Founder, Chief Strategy Officer",
+      position: "Chief Strategy Officer",
       images: images.founder4,
     },
   ];
