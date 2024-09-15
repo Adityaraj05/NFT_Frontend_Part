@@ -112,11 +112,10 @@ export const NFTMarketplaceProvider = ({ children }) => {
 
   // CREATE NFT FUNCTION
 
-  const createNFT = async (formInput, fileUrl, router) => {
-    const { name, description, price } = formInput;
-    if (!name || !description || !price || !fileUrl)
+  const createNFT = async (name, price, image, description, router) => {
+    if (!name || !description || !price || !image)
       return console.log("Data is missing");
-    const data = JSON.stringify({ name, description, image: fileUrl });
+    const data = JSON.stringify({ name, description, image});
 
     try {
       const added = await client.add(data);
@@ -146,6 +145,7 @@ export const NFTMarketplaceProvider = ({ children }) => {
           });
 
       await transcation.wait();
+      console.log(transcation);
     } catch (error) {
       console.log("error while creating sale");
     }
