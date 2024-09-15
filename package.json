@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.9.3",
-    "axios": "^1.7.5",
+    "axios": "^1.7.7",
     "ether": "^0.0.9",
     "framer-motion": "^11.3.30",
     "ipfs-http-client": "^60.0.1",
