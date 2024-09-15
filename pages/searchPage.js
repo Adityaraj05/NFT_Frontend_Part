@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState, useContext} from "react";
 
 //INTRNAL IMPORT
 import Style from "../styles/searchPage.module.css";
@@ -9,6 +9,10 @@ import { Filter } from "../components/componentsindex";
 import { NFTCardTwo, Banner } from "../collectionPage/collectionIndex";
 import images from "../img";
 
+
+// smart contract import 
+
+import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 const searchPage = () => {
   const collectionArray = [
     images.nft_image_1,

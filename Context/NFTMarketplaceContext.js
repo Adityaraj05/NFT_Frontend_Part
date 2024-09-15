@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import Web3Modal from "web3modal";
 import { ethers } from "ethers"; // Ensure this import is correct
-import Router from "next/router";
+import {useRouter} from "next/router";
 import axios from "axios";
 import { create as ipfsHttpClient } from "ipfs-http-client";
 
@@ -57,7 +57,7 @@ export const NFTMarketplaceProvider = ({ children }) => {
   //    USESTATE
 
   const [currentAccount, setCurrentAccount] = useState("");
-
+  const router = useRouter();
   // ---CHECK IF THE WALLET IS CONNECTED OR NOT
   const checkIfWalletConnected = async () => {
     try {
@@ -145,7 +145,7 @@ export const NFTMarketplaceProvider = ({ children }) => {
           });
 
       await transcation.wait();
-      console.log(transcation);
+      router.push('/searchPage')
     } catch (error) {
       console.log("error while creating sale");
     }
@@ -191,6 +191,10 @@ const fetchNFTS = async ()=>{
         console.log("Error while fetching NFTS");
     }
 }
+
+useEffect(() =>{
+ fetchNFTS();
+}, [])
 
 // FETCHING MY NFT OR LISTED NFTs
 
