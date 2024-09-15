@@ -14,6 +14,10 @@ import images from "../img";
 
 import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 
+
+// smart contract import 
+
+import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 const searchPage = () => {
   const {fetchNFTs} = useContext(NFTMarketplaceContext);
   const [nfts, setNfts]  = useState([]);
