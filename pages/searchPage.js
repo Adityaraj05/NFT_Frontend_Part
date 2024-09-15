@@ -44,7 +44,7 @@ const searchPage = () => {
       <Banner bannerImage={images.creatorbackground2} />
       <SearchBar />
       <Filter />
-      <NFTCardTwo NFTData={collectionArray} />
+      <NFTCardTwo NFTData={nfts} />
       <Slider />
       <Brand />
     </div>
