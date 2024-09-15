@@ -16,8 +16,19 @@ import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 
 const searchPage = () => {
   const {fetchNFTs} = useContext(NFTMarketplaceContext);
+  const [nfts, setNfts]  = useState([]);
+  const [nftsCopy, setNftsCopy] = useState([]);
 
-  
+  useEffect(()=>{
+    fetchNFTs().then((item)=>{
+      setNfts(item.reverse());
+      setNftsCopy(item);
+      console.log(nfts);
+
+    });
+  });
+
+
   const collectionArray = [
     images.nft_image_1,
     images.nft_image_2,
