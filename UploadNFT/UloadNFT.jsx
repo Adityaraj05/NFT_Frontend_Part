@@ -13,7 +13,7 @@ import images from "../img";
 import { Button } from "../components/componentsindex.js";
 import { DropZone } from "../UploadNFT/uploadNFTIndex.js";
 
-const UloadNFT = ({uploadToIPFS, createNFT}) => {
+const UloadNFT = ({ uploadToIPFS, createNFT }) => {
   const [price, setPrice] = useState("");
   const [active, setActive] = useState(0);
   const [name, setName] = useState("");
@@ -55,9 +55,23 @@ const UloadNFT = ({uploadToIPFS, createNFT}) => {
     },
   ];
 
+  const handleInputChange = (e) => {
+    
+    e.preventDefault();
+
+    const data = e.target.files[0];
+    const reader = new window.FileReader();
+
+    reader.readAsArrayBuffer(data);
+    reader.onloadend = () => {
+      setImage(e.target.files[0]);
+    };
+
+  }
+
   return (
     <div className={Style.upload}>
-      <DropZone
+      {/* <DropZone
         title="JPG, PNG, WEBM , MAX 100MB"
         heading="Drag & drop file"
         subHeading="or Browse media on your device"
@@ -70,7 +84,13 @@ const UloadNFT = ({uploadToIPFS, createNFT}) => {
         properties={properties}
         setImage = {setImage}
         uploadToIPFS = {uploadToIPFS}
-      />
+      /> */}
+
+      <div>
+        <form>
+          <input type="file" onChange={handleInputChange} />
+        </form>
+      </div>
 
       <div className={Style.upload_box}>
         <div className={formStyle.Form_box_input}>
@@ -94,6 +114,7 @@ const UloadNFT = ({uploadToIPFS, createNFT}) => {
               type="text"
               placeholder="website"
               onChange={(e) => setWebsite(e.target.value)}
+              className={formStyle.Form_box_input_userName}
             />
           </div>
 
@@ -113,6 +134,7 @@ const UloadNFT = ({uploadToIPFS, createNFT}) => {
             rows="6"
             placeholder="something about yourself in few words"
             onChange={(e) => setDescription(e.target.value)}
+            className={formStyle.Form_box_input_userName}
           ></textarea>
           <p>
             The description will be included on the item's detail page
@@ -129,9 +151,8 @@ const UloadNFT = ({uploadToIPFS, createNFT}) => {
           <div className={Style.upload_box_slider_div}>
             {categoryArry.map((el, i) => (
               <div
-                className={`${Style.upload_box_slider} ${
-                  active == i + 1 ? Style.active : ""
-                }`}
+                className={`${Style.upload_box_slider} ${active == i + 1 ? Style.active : ""
+                  }`}
                 key={i + 1}
                 onClick={() => (setActive(i + 1), setCategory(el.category))}
               >
@@ -214,25 +235,25 @@ const UloadNFT = ({uploadToIPFS, createNFT}) => {
         <div className={Style.upload_box_btn}>
           <Button
             btnName="Upload"
-            handleClick={async() => 
-            createNFT(
-              name,
-              price,
-              image, 
-              description,
-              router, 
-              // website, 
-              // royalties, 
-              // fileSize, 
-              // category, 
-              // properties
+            handleClick={async () =>
+              createNFT(
+                name,
+                price,
+                image,
+                description,
+                router,
+                // website, 
+                // royalties, 
+                // fileSize, 
+                // category, 
+                // properties
               )
             }
             classStyle={Style.upload_box_btn_style}
           />
           <Button
             btnName="Preview"
-            handleClick={() => {}}
+            handleClick={() => { }}
             classStyle={Style.upload_box_btn_style}
           />
         </div>
